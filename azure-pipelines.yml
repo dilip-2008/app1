@@ -8,21 +8,24 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-
+variables:
+  var1: Chennai 
+  var2: hyderabad
+  var3: delhi
 stages:
   - stage: Build
     jobs:
     - job: job1
       steps: 
-      - script: echo "Build"
+      - script: echo "Build run on $(var1)"
     - job: job2
       steps: 
-      - script: echo "Build2"
+      - script: echo "Build2 run on $(var2)"
   - stage: Deploy
     jobs:
     - job: job3
       steps:
-      - script: echo "Deploy"
+      - script: echo "Deployed on $(var3)"
 
               
           
