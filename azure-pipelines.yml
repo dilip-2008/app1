@@ -25,7 +25,7 @@ stages:
       - script: echo "Build run on $(var1)"
     - job: job2
       steps: 
-      - script: echo "Build2 run on $(var2)"
+      - script: echo "Build2 run on $(var1)"
   - stage: Deploy
     jobs:
     - job: job3
