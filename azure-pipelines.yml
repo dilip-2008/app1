@@ -37,7 +37,7 @@ stages:
        runOnce:
           deploy:
              steps:
-               - bash: echo:TEST environment"    
+               - bash: echo "TEST environment"    
          
 
     
