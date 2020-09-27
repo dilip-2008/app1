@@ -31,6 +31,16 @@ stages:
     - job: job3
       steps:
       - script: echo "Deployed on $(var3)"
+    - deployment: 
+      environment: TEST
+      strategy:
+       runOnce:
+          deploy:
+             steps:
+               - bash: echo:TEST environment"    
+         
+
+    
 
               
           
